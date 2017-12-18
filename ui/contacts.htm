@@ -1,0 +1,86 @@
+﻿<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
+<script src="assets/js/google-map.js"></script>
+
+<title>Контакты</title>
+
+<meta charset="utf-8" name="keywords" content="Контакты, Контакты ресторана, Контакты ресторана Amely, Сайт, Сайт ресторана Amely, Ресторан Amely контакты, Сообщение, Отзов, Оставить отзыв, Оставить отзыв ресторан Amely, Тех поддержка, Технитеская поддержка, Техническая поддержка Amely, Тех поддержка Amely, Тех поддержка ресторана Amely, Техническая поддержка ресторана Amely, Отзыв Amely, Контакты Amely">
+
+<div class="container m-4">
+<meta name="description" content="Помощь в работе и отзыв о работе ресторану Amely">
+	<div class="row">
+		<article class="col-sm-9 maincontent">
+			<header class="page-header">
+				<h1 class="page-title">Контакты</h1>
+			</header>
+				
+			<p>У вас возникли вопросы? задайте задайте их нам...</p>
+			<br>
+
+			<form action="/contacts" method="post">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-sm-4">
+							<input class="form-control" name="name_user" type="text" placeholder="Ваше имя">
+						</div>
+
+						<div class="col-sm-4">
+							<input class="form-control" name="mail_user" type="text" placeholder="Email">
+						</div>
+
+						<div class="col-sm-4"> 
+							<input class="form-control" name="tel_user" type="text" placeholder="Телeфон">
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<textarea placeholder="Ваш коментарий" name="comments_user" class="form-control" rows="9"></textarea>
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-6">
+						</div>
+					</div>						
+				</div>
+
+				<div class="col-sm-12 text-right">
+					<button class="btn btn-success">Отправить</button>
+				</div>
+			</form>
+
+ 			<div class="clearfix"></div>
+		</article>
+
+		<aside class="col-sm-3 sidebar sidebar-right">
+			<div class="widget">
+				<h4>Адрес:</h4>
+				<address>Москва, Новоясеневский пр-т, д.32</address>
+
+				<h4>Контактное лицо:</h4>
+				<address>Ксения Александровна</address>
+
+				<h4>Телефон:</h4>
+				<address>+7 (800) 555-35-35</address>
+
+
+
+  				<div class="right-contact">
+        			<div class="map">
+            				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.7626701483937!2d37.744449521251305!3d55.606144012809665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab16d0d35cbfd%3A0x15fd0a66c94567a7!2z0JPRg9GA0YzQtdCy0YHQutC40Lkg0L_RgC3QtCwgMTXQujIsINCc0L7RgdC60LLQsCwgMTE1NTk3!5e0!3m2!1sru!2sru!4v1512598107098" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>       
+        			</div>
+    			</div>
+			</div>
+		</aside>
+	</div>
+</div>
+
+<section class="container-full top-space">
+	<div id="map"></div>
+</section>
+
+<div class="py-4 my-5"></div> 

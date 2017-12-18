@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="<?php echo $ENCODING; ?>" />
+		<title>Amely</title>
+		<base href="<?php echo $SCHEME.'://'.$HOST.':'.$PORT.$BASE.'/'; ?>" />
+		
+		<link rel="stylesheet" type="text/css" href="ui/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="ui/css/ss.css">
+		<link rel="stylesheet" href="ui/font/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="ui/images/logo.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="ui/css/component.css">
+		<link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+	</head>
+	<body>
+		
+		<script src="ui/jquery/dist/jquery.min.js" charset="utf-8"></script>
+		<script src="ui/popper.js/dist/umd/popper.js" charset="utf-8"></script>
+		<script src="ui/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+		<nav class="navbar navbar-light navbar-expand-lg cl-effect-7" style="background-color: #f7f4f4;">
+			
+    			<img src="ui/images/logo.png" height="45" width="100" class="d-inline-block align-top" alt="">
+  			
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent" >
+  				<ul class="navbar-nav mx-4">
+  					<li>
+  						<a  href="/" >ГЛАВНАЯ</a>
+  					</li>
+  					<li>
+  						<a href="/menu">МЕНЮ</a>
+  					</li>
+  					<li>
+  						<a href="/contacts" >КОНТАКТЫ</a>
+  					</li>
+  				</ul>
+
+				<ul class="navbar-nav ml-auto">
+							<li>
+									<button href="#" class="btn btn-rezerv" data-toggle="modal" data-target="#bronModal">Зарезервировать <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+							</li>
+						
+					</li>
+				</ul>
+			  </div>
+			</nav>
+			
+			<?php echo $this->render(Base::instance()->get('content')); ?>
+
+
+
+			<div class="modal my-5" data-backdrop="false" tabindex="-1" id="bronModal" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content modal-div">
+				    <form method="post" action="/bron">
+					    <div class="modal-header">
+					    	<h5 class="modal-title text-left">ЗАРЕЗЕРВИРОВАТЬ</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					        	<span aria-hidden="true">&times;</span>
+					        </button>
+					    </div>
+
+					    <div class="modal-body">
+					        <input type="text" name="name_bron" class="form-control dsa" placeholder="Представьтесь, пажалуйста *">
+					        <br>
+					        <input type="text" name="tel_bron" class="form-control dsa" placeholder="Телефон *">
+					        <br>
+					        <input type="text" name="mail_bron" class="form-control dsa" placeholder="Электронная почта *">
+					        <br>
+					        <input type="date" name="date_bron" class="form-control dsa" placeholder="Дата визита *">
+					        <br>
+					        <input type="text" name="kol_bron" class="form-control dsa" placeholder="Количество гостей *">
+					        <br>
+					        <div class="row mx-1">
+					        	<input type="text" name="time_from_bron" class="form-control dsa col-md-5" placeholder="с ЧЧ:ММ *">
+					        	<div class="col-md-1"></div>
+					        	<input type="text" name="time_to_bron" class="form-control dsa col-md-5" placeholder="до ЧЧ:ММ *">
+					        </div>
+					        <br>
+							<textarea placeholder="Ваш коментарий *" name="comment_bron" class="form-control dsa" rows="8"></textarea>		
+					        <br>
+					        <div class="text-center">
+					        	<button type="submit" class="btn btn-otpr">ОТПРАВИТЬ</button>
+					        </div>
+					    </div>
+					    <div class="modal-footer text-center">
+					        <p class="pol">Или позвоните нам по телефону +7 (495) 66 33 999</p>
+					    </div>
+			        </form>
+			    </div>
+			  </div>
+			</div>
+			
+             <footer class="footer text-center py-2" style="background-color: #D3A352; font-size: 12px; height: 30px;">
+             	<p>Москва, Смоленская площадь, д.3, 16 этаж  |  +7 (495) 66-33-999/+7 (495) 782-62-62</p>
+             </footer>  
+	</body>
+</html>
